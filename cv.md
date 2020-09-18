@@ -62,4 +62,4 @@ No experience
 Studying in Belarusian National Technical University, Information Technologies and Robotics faculty, Software for computers and automated systems.
 
 ## English level
-My English level is B1 Intermediate (epam test)
+My English level is B1 Intermediate (Epam test)
