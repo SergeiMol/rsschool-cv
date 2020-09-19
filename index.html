@@ -1,11 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link href="style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <title>Sergei Molokhvei CV</title>
 </head>
+
 <body>
-    
+    <header>
+        <h1>Sergei Molokhvei</h1>
+        <img src="img/my_photo.jpg" width="160px" height="180px">
+    </header>
+    <main class="content">
+        <section>
+            <h3>Contacts</h3>
+            <ul>
+                <li>+375299309709</li>
+                <li>sergei.molohvey@gmail.com</li>
+                <li><a href="https://www.linkedin.com/in/sergei-molokhvei-56b41b1aa/">Linkedin</a></li>
+            </ul>
+        </section>
+        <section>
+            <h3>Summary</h3>
+            <p>I’d like to find a job and start working as a Junior front-end developer. Moreover, I’d like to learn
+                React, Angular, NodeJS and other technologies. I enjoy studying and I’m ready to gain experience. I can
+                work full time.</p>
+        </section>
+        <section>
+            <h3>Skills</h3>
+            <ul>
+                <li>Python</li>
+                <li>C++</li>
+                <li>JavaScript</li>
+            </ul>
+        </section>
+        <section>
+            <h3>Code examples</h3>
+            <pre>
+            import random
+            score = 0
+            condition = None
+            while condition != '0':
+                print(""" Здравствуйте и добро пожаловать в игру Анаграммы!
+                 Ваша задача: отгадать слово по буквам
+                 (Нажмите клавишу ввода, чтобы выйти.) """)
+                maxscore = int(input('Введите максимальное количество очков которое вы хотите получить в итоге: '))
+                while score < maxscore:
+                    WORDS = (
+                        "python", "анаграмма", "Пушкин", "rosa", "Гагарин", "intel", "шляпа", "процессор", "мак", "assembler",
+                        "банк", "volkswagen", "steam", "android", "ель", "человечность", "магазин", "пенал", "штопор", "ibm")
+                    word = random.choice(WORDS)
+                    correct = word
+                    jumble = ""
+                    while word:
+                        position = random.randrange(len(word))
+                        jumble += word[position]
+                        word = word[:position] + word[(position + 1):]
+                    print("Анаграмма: ", jumble)
+                    attemptsMax = int(input("Сколько вы хотите попыток?"))
+                    attemptsYour = 0
+                    guess = ""
+                    while attemptsYour < attemptsMax and guess != correct:
+                        if guess != correct:
+                            guess = input("Ваши догадки: ")
+                            if guess != correct:
+                                print("Извините, не верно.")
+                        if guess == correct:
+                            print("Всё верно, Вы угадали!\n")
+                            score += 15
+                        if attemptsYour == attemptsMax:
+                            print("Извините, количество попыток исчерпано :(")
+                            break
+                        attemptsYour += 1
+                print("Поздравляем с завершением игры!\nПолучено очков " + str(score) + ".\nСпасибо за игру.")
+                condition = input("Если хотите играть снова, нажмите любую клавишу. Если хотите выйти, нажмите 0.")
+                score = 0
+            </pre>
+        </section>
+        <section>
+            <h3>Experience</h3>
+            <p>No experience</p>
+        </section>
+        <section>
+            <h3>Education</h3>
+            <p>Studying in Belarusian National Technical University, Information Technologies and Robotics faculty,
+                Software for computers and automated systems.</p>
+            <h3>English level</h3>
+            <p>My English level is B1 Intermediate (Epam test)</p>
+        </section>
+    </main>
 </body>
+
 </html>
