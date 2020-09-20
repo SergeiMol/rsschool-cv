@@ -1,0 +1,25 @@
+header, 
+img,
+h1{
+    margin: 25px;
+    display: inline;
+}
+
+img{
+    border-radius: 100%;
+    float: right;
+    margin: 25px 50px 0px 0px;
+
+}
+
+body {
+	max-width: 1024px;
+    margin: 0 auto;
+    background-image: url(https://png.pngtree.com/thumb_back/fw800/background/20190221/ourmid/pngtree-shading-background-abstract-colorful-background-colorful-art-image_22644.jpg);
+    background-size: 100% 1350px;
+    
+}
+
+.content {
+    font-family: 'Lato', sans-serif;   
+}
